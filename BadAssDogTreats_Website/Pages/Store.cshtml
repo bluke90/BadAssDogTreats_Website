@@ -7,5 +7,35 @@
 <div class="store-container">
     <h1 class="store-text">Store Page</h1>
     <span>Shop our products with our safe and secure Store Page!</span>
-    <div class="store-container2"></div>
+    <div class="store-container2">
+
+        @foreach (var item in Model.StoreItems) {
+            <div class="store-item">
+                <div class="store-item-image">
+                    <img src="@item.Image" alt="@item.Name" />
+                </div>
+                <div class="store-item-name">
+                    <h3>@item.Name</h3>
+                </div>
+                <div class="store-item-description">
+                    <p>@item.Description</p>
+                </div>
+                <div class="store-item-price">
+                    <p><b>Price: $@item.Price</b></p>
+                </div>
+                <div class="store-item-discount">
+                    @if (item.Discount > 0) {
+                        <p>Discount: @item.Discount</p>
+                    }
+                </div>
+                <div class="store-item-weight">
+                    <p>Weight: @item.Weight Oz</p>
+                </div>
+                <div class="store-item-add">
+                    <a class="primary-btn" asp-page="./Details" asp-route-id="@item.ID">Add to Cart</a>
+                </div>
+            </div>
+        }        
+
+    </div>
 </div>

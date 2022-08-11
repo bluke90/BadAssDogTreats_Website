@@ -1,0 +1,49 @@
+﻿@page
+@model BadAssDogTreats_Website.Pages.BackEnd.Store.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>StoreItem</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.StoreItem.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StoreItem.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.StoreItem.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StoreItem.Description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.StoreItem.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StoreItem.Price)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.StoreItem.Discount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StoreItem.Discount)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.StoreItem.Weight)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StoreItem.Weight)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.StoreItem?.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

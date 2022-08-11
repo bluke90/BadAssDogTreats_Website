@@ -52,6 +52,14 @@
   border-radius: 4px;
   background-color: var(--dl-color-gray-white);
 }
+.primary-btn {
+    display: inline-block;
+    background-color: deepskyblue;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px 1px #858585;
+    font-family: Raleway;
+}
 .textarea {
   color: var(--dl-color-gray-black);
   cursor: auto;

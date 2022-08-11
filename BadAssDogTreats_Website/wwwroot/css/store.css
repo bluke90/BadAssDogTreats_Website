@@ -201,3 +201,18 @@
     padding: 16px;
   }
 }
+
+.store-container2{
+    padding: 10px;
+}
+
+.store-item {
+    border: solid 1px #ededed;
+    border-radius: 2px;
+    background-color: #e8e8e8;
+    margin: 10px, 10px;
+    width: 40%;
+    height: 55%;
+    padding: 10px;
+    box-shadow: 5px 5px 10px 1px #d1d1d1;
+}

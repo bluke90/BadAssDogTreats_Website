@@ -60,6 +60,10 @@ button, [type="button"], [type="reset"], [type="submit"] {
         outline: 1px dotted ButtonText;
     }
 
+    .button{
+        background-color:dodgerblue;
+    }
+
 a {
     color: inherit;
     text-decoration: inherit;
