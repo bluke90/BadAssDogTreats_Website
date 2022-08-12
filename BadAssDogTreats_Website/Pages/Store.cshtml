@@ -2,18 +2,21 @@
 @model BadAssDogTreats_Website.Pages.StoreModel
 @{
 }
-<link href="~/css/store.css" rel="stylesheet" />
-
+<link rel="stylesheet" href="~/css/store.css" />
 <div class="store-container">
     <h1 class="store-text">Store Page</h1>
     <span>Shop our products with our safe and secure Store Page!</span>
     <div class="store-container2">
 
         @foreach (var item in Model.StoreItems) {
+            <a asp-page="./StoreItem" asp-route-id="@item.ID" class="div-link">
             <div class="store-item">
-                <div class="store-item-image">
-                    <img src="@item.Image" alt="@item.Name" />
+                @if (item.Image != null)
+                {
+                    <div class="store-item-image">
+                        <img src="/Images/@item.Image.FileName" alt="@item.Name" width="300" height="200"/>
                 </div>
+                }
                 <div class="store-item-name">
                     <h3>@item.Name</h3>
                 </div>
@@ -35,6 +38,7 @@
                     <a class="primary-btn" asp-page="./Details" asp-route-id="@item.ID">Add to Cart</a>
                 </div>
             </div>
+            </a>
         }        
 
     </div>

@@ -141,3 +141,21 @@
   text-transform: none;
   text-decoration: none;
 }
+
+a.div-link{
+    text-decoration:none;
+    
+}
+
+    a.div-link:hover {
+        text-decoration: none;
+    }
+    a.div-link:active {
+        text-decoration: none;
+    }
+    a.div-link:link {
+        text-decoration: none;
+    }
+    a.div-link:visited {
+        text-decoration: none;
+    }

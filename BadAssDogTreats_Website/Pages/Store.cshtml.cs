@@ -2,6 +2,7 @@ using BadAssDogTreats_Website.Data;
 using BadAssDogTreats_Website.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 
 namespace BadAssDogTreats_Website.Pages
 {
@@ -17,7 +18,11 @@ namespace BadAssDogTreats_Website.Pages
 
         public void OnGet()
         {
-            StoreItems = _context.StoreItem.ToList();
+            StoreItems = _context.StoreItem.Include(m => m.Image).ToList();
         }
+
+
+        
+
     }
 }
