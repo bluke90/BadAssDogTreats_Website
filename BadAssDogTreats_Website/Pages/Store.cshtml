@@ -9,7 +9,7 @@
     <div class="store-container2">
 
         @foreach (var item in Model.StoreItems) {
-            <a asp-page="./StoreItem" asp-route-id="@item.ID" class="div-link">
+            <a asp-page="./StoreItemPage" asp-route-id="@item.ID" class="div-link">
             <div class="store-item">
                 @if (item.Image != null)
                 {

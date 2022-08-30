@@ -1,0 +1,38 @@
+﻿@page
+@model BadAssDogTreats_Website.Pages.StoreItemPageModel
+@{
+}
+
+<link rel="stylesheet" href="~/css/StoreItem.css" />
+
+<div class="store-item-container">
+    <div class="store-item-top">
+        <img src="/Images/@Model.Item.Image.FileName"/>
+        <div style="display:flex; flex-direction:column;" class="store-item-right">
+            <div class="store-item-header">
+                <h3>@Model.Item.Name</h3>
+            </div>
+            <div class="store-item-weight">
+                <h6>@Model.Item.Weight Oz</h6>
+            </div>
+            <div class="store-item-price">
+                <h4>@Model.Item.Price</h4>
+            </div>
+            <div class="store-item-buttons">
+                <button class="buyBtn button">Buy Now</button>
+                <button class="addBtn button">Add To Cart</button>
+            </div>
+
+            <!-- buy button, add to cart button, price, any discounts, weight-->
+
+        </div>
+    </div>
+
+    <div>
+        <p>
+            @Model.Item.Description
+        </p>
+        <!-- Item description -->
+    </div>
+
+</div>

@@ -8,7 +8,7 @@ namespace BadAssDogTreats_Website.Pages
 {
     public class StoreModel : PageModel
     {
-        private readonly WebContext _context;
+         private readonly WebContext _context;
 
         public StoreModel(WebContext context) {
             _context = context;
