@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<WebContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("WebContext") ?? throw new InvalidOperationException("Connection string 'WebContext' not found.")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("productionDb") ?? throw new InvalidOperationException("Connection string 'WebContext' not found.")));
 
 
 

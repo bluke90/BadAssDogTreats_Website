@@ -30,9 +30,17 @@
           data-tag="font" />
     <link rel="stylesheet" href="~/css/style.css" />
     <link rel="stylesheet" href="~/css/home.css" />
+    <link rel="stylesheet" href="~/css/mobile.css" />
 </head>
         <body>
+            <div class="site-alert">
+                <div class="content">
+                <img src="~/Images/warningIcon.png" width="75" height="75" />
+                <h6>This site is currently under construction.</h6>
+        </div>
+            </div>
             <div>
+ 
                 <div class="home-container">
                     <div data-role="Header" class="home-navbar-container">
                         <div class="home-navbar">
@@ -40,11 +48,6 @@
                                 <img alt="image"
                                      src="/playground_assets/bad%20ass%20dog%20treats-1-200h.png"
                                      class="home-image" />
-                                <div data-type="BurgerMenu" class="home-burger-menu">
-                                    <svg viewBox="0 0 1024 1024" class="home-icon">
-                                        <path d="M128 256h768v86h-768v-86zM128 554v-84h768v84h-768zM128 768v-86h768v86h-768z"></path>
-                                    </svg>
-                                </div>
                                 <div class="home-links-container">
                                     <a href="./index" class="home-link anchor">Home</a>
                                     <a href="./store" class="home-link01 anchor">Store</a>
@@ -53,31 +56,29 @@
                                 </div>
                             </div>
                             <div class="home-right-side">
-                                <button class="home-cta-btn anchor button">Order Now</button>
-                            </div>
-                            <div data-type="MobileMenu" class="home-mobile-menu">
-                                <div class="home-container1">
-                                    <img alt="image"
-                                         src="https://play.teleporthq.io/static/svg/default-img.svg"
-                                         class="home-image1" />
-                                    <div data-type="CloseMobileMenu" class="home-close-menu">
-                                        <svg viewBox="0 0 1024 1024" class="home-icon02">
-                                            <path d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="home-links-container1">
-                                    <a href="#resources" class="home-link04 anchor">Resources</a>
-                                    <a href="#inspiration" class="home-link05 anchor">
-                                        Inspiration
-                                    </a>
-                                    <a href="#process" class="home-link06 anchor">Process</a>
-                                    <span class="home-link07 anchor">Our story</span>
-                                </div>
+                                <button class="home-burger-menu">
+                                    <div class="bar"></div>
+                                </button>
                             </div>
                         </div>
                     </div>
-            <div class="container">
+            <div class="sidebar-container">
+                <ul class="sidebar-navigation">
+                    <li class="header">Menu</li>
+                    <li>
+                        <a asp-page="index">
+                            <i class="fa fa-home" aria-hidden="true"></i> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-page="store">
+                            <i class="fa fa-home" aria-hidden="true"></i> Store
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="content-container" style="width:99%;">
                 <main role="main" class="pb-3">
                     @RenderBody()
                 </main>
@@ -108,6 +109,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/mobile.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

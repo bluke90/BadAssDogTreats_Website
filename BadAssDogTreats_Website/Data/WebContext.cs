@@ -15,6 +15,7 @@ namespace BadAssDogTreats_Website.Data
         }
 
         public DbSet<BadAssDogTreats_Website.Models.StoreItem> StoreItem { get; set; } = default!;
-        public DbSet<BadAssDogTreats_Website.Models.Image> Image { get; set; } = default!;
+        public DbSet<BadAssDogTreats_Website.Models.Image> Image { get; set; } = default!; 
+        public DbSet<BadAssDogTreats_Website.Models.ToDo>? ToDo { get; set; }
     }
 }

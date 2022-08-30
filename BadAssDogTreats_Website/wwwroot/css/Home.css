@@ -29,6 +29,7 @@
   flex-direction: row;
   padding-bottom: var(--dl-space-space-doubleunit);
   justify-content: space-between;
+  min-height:60px;
 }
 .home-left-side {
   display: flex;
@@ -36,6 +37,7 @@
   flex-direction: row;
   justify-content: center;
 }
+
 .home-image {
   width: 166px;
   height: 28px;
@@ -184,7 +186,7 @@
   margin-bottom: var(--dl-space-space-fiveunits);
 }
 .home-text {
-  color: #000000;
+  color: #fff ;
   text-align: center;
   margin-bottom: var(--dl-space-space-fiveunits);
 }
@@ -751,7 +753,7 @@
     margin-bottom: var(--dl-space-space-tripleunit);
   }
 }
-@media(max-width: 767px) {
+@media(max-width: 1024px) {
   .home-burger-menu {
     display: flex;
     padding: var(--dl-space-space-halfunit);
@@ -888,3 +890,5 @@
     margin-bottom: 0px;
   }
 }
+
+.

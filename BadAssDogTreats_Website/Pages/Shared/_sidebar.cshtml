@@ -1,0 +1,101 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<div class="sidebar-container">
+    <div class="sidebar-logo">
+        Admin Menu
+    </div>
+    <ul class="sidebar-navigation">
+            <li class="header">Information Technology</li>
+            <li>
+                <a asp-page="/IT/Projects/Index">
+                    <i class="fa fa-home" aria-hidden="true"></i> Projects
+                </a>
+            </li>
+            <li>
+                <a asp-page="/IT/NetworkChanges/Index">
+                    <i class="fa fa-tachometer" aria-hidden="true"></i> Network Changes
+                </a>
+            </li>
+            <li>
+                <a asp-page="/IT/AdminCenter/Index">
+                    <i class="fa fa-users" aria-hidden="true"></i> Admin Center
+                </a>
+            </li>
+            <li>
+                <a asp-page="/IT/ITRequests/ITPurchases/Index">
+                    <i class="fa fa-users" aria-hidden="true"></i> Purchase Request
+                </a>
+            </li>
+            <li>
+                <a asp-page="/IT/ITRequests/FilePermissions/Index">
+                    <i class="fa fa-users" aria-hidden="true"></i> Permission Request
+                </a>
+            </li>
+            <li class="header">HelpDesk</li>
+            <li>
+                <a asp-page="/IT/Tickets/Index">
+                    <i class="fa fa-tachometer" aria-hidden="true"></i> Open Tickets
+                </a>
+            </li>
+            <li>
+                <a asp-page="/IT/Tickets/CompletedTickets">
+                    <i class="fa fa-tachometer" aria-hidden="true"></i> Completed Tickets
+                </a>
+            </li>
+            <li class="header">Inventory Management</li>
+            <li>
+                <a asp-page="/IT/InventoryManagement/Assets/Index">
+                    <i class="fa" aria-hidden="true"></i> Assets
+                </a>
+            </li>
+            <li>
+                <a asp-page="/IT/InventoryManagement/Archives/Index">
+                    <i class="fa" aria-hidden="true"></i> Archives
+                </a>
+            </li>
+            <li class="header">Settings</li>
+            <li>
+                <a asp-page="/Settings/Notifications">
+                    <i class="fa" aria-hidden="true"></i> Notifications
+                </a>
+            </li>
+            <li class="header">Human Resources</li>
+            <li>
+                <a asp-page="/Employees/index">
+                    <i class="fa fa-home" aria-hidden="true"></i> Employees
+                </a>
+            </li>
+            <li>
+                <a asp-page="/Employees/Groups/Index">
+                    <i class="fa fa-home" aria-hidden="true"></i> Groups
+                </a>
+            </li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    var box = $("#requestBox");
+    var btn = $("#toggle-requests");
+
+    $(document).ready(function () {
+        box.hide();
+    });
+
+    btn.on("click", function () {
+        box.show();
+    });
+</script>
+
+
+
