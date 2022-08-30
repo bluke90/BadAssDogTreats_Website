@@ -31,7 +31,8 @@ namespace BadAssDogTreats_Website.Pages.BackEnd.ToDos
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-          if (!ModelState.IsValid || _context.ToDo == null || ToDo == null)
+            ToDo.CreationDate = DateTime.Now;
+            if (!ModelState.IsValid || _context.ToDo == null || ToDo == null)
             {
                 return Page();
             }

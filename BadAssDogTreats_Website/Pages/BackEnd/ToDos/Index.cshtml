@@ -7,7 +7,7 @@
 
 <link rel="stylesheet" href="~/css/Backend.css"/>
 
-<h1>ToDo</h1>
+<h1>To-Do</h1>
 
 <p>
     <a class="button" asp-page="Create">Create New</a>
@@ -20,6 +20,9 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.ToDo[0].Details)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ToDo[0].CreationDate)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.ToDo[0].Completed)
@@ -43,10 +46,13 @@
                 @Html.DisplayFor(modelItem => item.Details)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.CreationDate)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Completed)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Cost)
+                $@Html.DisplayFor(modelItem => item.Cost)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DueDate)
@@ -54,6 +60,7 @@
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Completion" asp-route-id="@item.Id">Complete</a>
                 <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>

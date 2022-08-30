@@ -133,3 +133,30 @@ site-alert {
 .site-alert h6 {
     padding-top:4%;
 }
+
+.form-group {
+    margin-bottom:2px;
+}
+
+.form-group input {
+    box-shadow: 4px 4px 4px 1px #e1e1e1;
+}
+.flex-container {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+.detailes-container {
+    
+}
+.details-right {
+    margin-top:1%;
+    min-width:40%;
+}
+@media screen and (min-width: 0px) and (max-width: 768px) {
+    .flex-container {
+        flex-direction:column;
+        margin-right:auto;
+        margin-left:auto;
+    }
+}
