@@ -5,9 +5,15 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
 
-<h4>ToDo</h4>
+<div class="btn-back">
+    <a asp-page="Index">
+        <img src="~/Images/back_button_img.png" width="25" height="25" />
+    </a>
+</div>
+
+<h1>Create ToDo Task</h1>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -23,11 +29,7 @@
                 <input asp-for="ToDo.Details" class="form-control" />
                 <span asp-validation-for="ToDo.Details" class="text-danger"></span>
             </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="ToDo.Completed" /> @Html.DisplayNameFor(model => model.ToDo.Completed)
-                </label>
-            </div>
+
             <div class="form-group">
                 <label asp-for="ToDo.Cost" class="control-label"></label>
                 <input asp-for="ToDo.Cost" class="form-control" />
@@ -38,16 +40,20 @@
                 <input asp-for="ToDo.DueDate" class="form-control" />
                 <span asp-validation-for="ToDo.DueDate" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ToDo.Completed" /> @Html.DisplayNameFor(model => model.ToDo.Completed)
+                </label>
+            </div>
+
+            <div class="form-group" style="margin-top:2%;">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-page="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
