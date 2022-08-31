@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using BadAssDogTreats_Website.Data;
+using Microsoft.AspNetCore.Authentication.Certificate;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -8,7 +10,14 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<WebContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("productionDb") ?? throw new InvalidOperationException("Connection string 'WebContext' not found.")));
 
+var kestralSection = builder.Configuration.GetSection("kestrel");
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.Configure(kestralSection).Endpoint("HTTPS", listenOptions =>
+    {
 
+    });
+});
 
 var app = builder.Build();
 
