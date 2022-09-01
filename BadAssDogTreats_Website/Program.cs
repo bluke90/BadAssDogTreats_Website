@@ -13,6 +13,10 @@ using Microsoft.Identity.Web.UI;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var kestralOptions = builder.Configuration.GetSection("Kestrel");
+
+
+
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<WebContext>(options =>
@@ -28,9 +32,10 @@ builder.Services.AddControllersWithViews(options => {
     options.Filters.Add(new AuthorizeFilter(policy));
 });
 builder.Services.AddRazorPages().AddMicrosoftIdentityUI().AddRazorPagesOptions(options => {
-    options.Conventions.AllowAnonymousToPage("/index");
-    options.Conventions.AuthorizeFolder("/backend/Store");
-    options.Conventions.AuthorizeFolder("/backend/ToDos");
+    options.Conventions.AllowAnonymousToFolder("/");
+    //options.Conventions.AllowAnonymousToPage("/index");
+    //options.Conventions.AuthorizeFolder("/backend/Store");
+    //options.Conventions.AuthorizeFolder("/backend/ToDos");
 });
 
 
