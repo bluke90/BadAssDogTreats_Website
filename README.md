@@ -1,6 +1,6 @@
-Developed By: Blake Ganzerla
-Under Company: Proton Technologies LLC
-Brand: Bad Ass Dog Treats
+Developed By: Blake Ganzerla <br />
+Under Company: Proton Technologies LLC <br />
+Brand: Bad Ass Dog Treats <br />
 ------------------------------------------------
 
 This project was abandoned due to the business idea itself being abandoned.
